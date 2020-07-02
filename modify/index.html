@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Web_programming</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/clean-blog.min.css" rel="stylesheet">
+
+</head>
+
+<body onload="hoyun()">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div id="hoyundiv" class="container">
+      <a class="navbar-brand" href="index.html">Hoyun's Page</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="post.html">Sample Post</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/home-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Hoyun_Web_Programming</h1>
+            <span class="subheading">This page is Modified</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+<div style="text-align: center;">
+  <canvas id ="canvas" width="800" height="200" style="display: inline-block;"
+  onmouseover="startTimer(5000)"
+  onmouseout="cancelTimer()">
+</div>
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="post-preview">
+          <a href="post.html">
+              <h2 class="post-title">
+               <mark><span id="I_span" style="font-size: 0.65em">시간을 지배할 줄 아는 사람은 인생을 지배할 줄 아는 사람이다 </span></mark>
+              </h2>
+            <h3>
+              <div style="font-size: 0.8em"><p id="nowtime"></p></div>
+            </h3>
+          </a>
+
+        </div>
+        <hr>
+        <div class="post-preview">
+          <a href="post.html">
+            <h2 class="post-title">
+              **행운의 숫자 출력 하기**  
+            </h2>
+            <h3 class="post-subtitle">
+              <div style="background-color: #CEF279; border:10px ridge #664B00"><p id="p" style="font-size: 0.8em"> </p></div>
+            </h3>
+
+          </a>
+
+        </div>
+        <hr>
+        <div class="post-preview">
+          <a href="post.html">
+            <h2 class="post-title">
+              **행운의 숫자들 정렬**
+            </h2>
+
+            <h3 class="post-subtitle">
+              <div id=divW style="border:10px ridge #664B00"><p id="p_sort"></p></div>
+            </h3>
+          </a>
+        </div>
+
+        <hr>
+        <div class="post-preview" >
+          <a href="post.html">
+            <h2 class="post-title">
+              **행운의 숫자들 JOIN**
+            </h2>
+
+            <h3 class="post-subtitle">
+              <div style="background-color: #CEF279; border:10px ridge #664B00"><p id="p_join"> </p></div>
+            </h3>
+          </a>
+        </div>
+        <hr>
+        <div class="post-preview">
+          <a href="post.html">
+            <h2 class="post-title">
+             **행운의 숫자들 반대로 정렬**
+            </h2>
+            <h3 class="post-subtitle">
+              <div id=divg style="border:10px ridge #664B00"><p id="p_resort"> </p></div>
+            </h3>
+          </a>
+        </div>
+        <hr>
+        <div class="post-preview">
+          <a href="post.html">
+            <h2 class="post-title">
+              **행운의 숫자들 JOIN**
+            </h2>
+            <h3 class="post-subtitle">
+              <div style="background-color: #CEF279; border:10px ridge #664B00" ><p id="p_rejoin"> </p></div>
+            </h3>
+          </a>
+        </div>
+        <hr>
+        <!-- Pager -->
+            <div style="text-align: center;">
+              <p id="firstP"></p>
+              <button onclick="f_text(event)">클릭 시 객체 프로퍼티 출력</button>
+            </div>
+            <hr>
+            <hr>
+            <div style="text-align: center;"> <!--10.5 윈도우의 위치와 크기 조절-->
+              <button onclick="window.moveBy(-10, 0)">left</button>
+              <button onclick="window.moveBy(10, 0)">right</button>
+              <button onclick="self.moveBy(0, -10)">up</button>
+              <button onclick="moveBy(0, 10)">down</button>
+              <button onclick="resizeBy(10, 10)">+</button>
+              <button onclick="resizeBy(-10, -10)">-</button>
+            </div>
+            <hr>
+            <hr>
+            <br>
+        <div class="clearfix">
+          <a id="older" class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            <li class="list-inline-item">
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright text-muted">Copyright &copy; Your Website 2020</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/clean-blog.min.js"></script>
+
+  <script type="text/javascript">
+    var p = document.getElementById("p");
+    var p_sort = document.getElementById("p_sort"); 
+    var p_join = document.getElementById("p_join");
+    var p_resort = document.getElementById("p_resort");
+    var p_rejoin = document.getElementById("p_rejoin");
+    var str="";
+    var str_re="";
+    var array = new Array(); // ** 7.3 Array객체로 배열 만들기 **
+    array[0] = Math.floor(Math.random()*100);
+    array[1] = Math.floor(Math.random()*100);
+    array[2] = Math.floor(Math.random()*100);
+    array[3] = Math.floor(Math.random()*100);
+    
+    for(var i=0;i<array.length;i++)
+    {
+      var str = str+(i+1)+"번째 숫자 : "+array[i]+ " ";
+    }
+
+    
+    p.innerHTML=str;
+    p_sort.innerHTML = array.sort(); // ** 7.4 Array객체의 메소드 활용 ** 
+    p_join.innerHTML = array.join("**"); // ** 7.4 Array객체의 메소드 활용 ** 
+    p_resort.innerHTML = array.reverse(); // ** 7.4 Array객체의 메소드 활용 ** 
+    p_rejoin.innerHTML = array.join("##"); // ** 7.4 Array객체의 메소드 활용 ** 
+
+    var current = new Date(); // ** 7.6 방문 시간에 따라 변하는 배경색 만들기 ** 
+    var divg=document.getElementById("divg");
+    var divW=document.getElementById("divW");
+    if(current.getSeconds() % 2 == 0)
+    {
+      divg.style.backgroundColor = "#B2EBF4";
+      divW.style.backgroundColor = "#B2CCFF";
+    }
+    else
+    {
+      divg.style.backgroundColor = "#B2CCFF";
+      divW.style.backgroundColor = "#B2EBF4";
+    }
+    var now = new Date(); // ** 7.5 Date 객체 생성 및 활용 **
+    var timestr = "현재시간 : " + now.toUTCString()+ "<br>";
+    timestr += now.getFullYear() +"년 ";
+    timestr += now.getMonth()+1+"월 ";
+    timestr += now.getDate()+"일 ";
+    timestr += now.getHours()+"시 ";
+    timestr += now.getMinutes()+"분 ";
+    timestr += now.getSeconds()+"초 ";
+    var nowtime = document.getElementById("nowtime");
+    nowtime.innerHTML=timestr;
+
+    
+    function hoyun(){
+        var hoyundiv = document.getElementById("hoyundiv"); // ** 9.4 익명함수로 이벤트 리스너 작성 **
+        hoyundiv.onmouseover= function() {
+          this.style.backgroundColor = "#FFD9EC";
+        };
+        hoyundiv.addEventListener("mouseout",function(){
+          this.style.backgroundColor="";
+        });
+        }
+    
+
+    var older = document.getElementById("older");
+
+    function f(e){ // **9.5 이벤트 리스너에서 이벤트 객체 전달 받기 **
+      alert(e.type+"이벤트 발생 !!");
+    }
+    older.onmouseover = f;
+
+    function f_text(e){ // **9.6 이벤트 객체의 프로퍼티 출력 **
+      var text = "type : " + e.type + "<br>"
+      + "target : " + e.target + "<br>"
+      + "currentTarget : " + e.currentTarget + "<br>"
+      + "defaultPrevented : " + e.defaultPrevented;
+
+      var p=document.getElementById("firstP");
+      p.innerHTML = text;
+    }
+
+    var span=document.getElementById("I_span"); // **10.4 setInterval()로 텍스트 회전 **
+    var I_timerID = setInterval("deRotate()", 200);
+
+    span.onclick = function(e) {
+      clearInterval(I_timerID);
+    }
+    function deRotate() {
+      var spanstr = span.innerHTML;
+      var firstChar = spanstr.substr(0,1);
+      var remains = spanstr.substr(1, str.length-1);
+      spanstr=remains+firstChar;
+      span.innerHTML=spanstr;
+    }
+
+
+  </script>
+
+  <script type="text/javascript">
+    var img = new Image(); // ** 애니메이션 만들기 **
+
+    // 변수
+    // 스크롤될 이미지, 방향, 속도를 바꾸려면 변수값을 바꾼다.
+
+    img.src = 'https://mdn.mozillademos.org/files/4553/Capitan_Meadows,_Yosemite_National_Park.jpg';
+    var CanvasXSize = 800;
+    var CanvasYSize = 200;
+    var speed = 30; // 값이 작을 수록 빨라진다
+    var scale = 1.05;
+    var y = -4.5; // 수직 옵셋
+
+    // 주요 프로그램
+
+    var dx = 0.75;
+    var imgW;
+    var imgH;
+    var x = 0;
+    var clearX;
+    var clearY;
+    var ctx;
+
+    img.onload = function() {
+        imgW = img.width*scale;
+        imgH = img.height*scale;
+        if (imgW > CanvasXSize) { x = CanvasXSize-imgW; } // 캔버스보다 큰 이미지
+        if (imgW > CanvasXSize) { clearX = imgW; } // 캔버스보다 큰 이미지
+        else { clearX = CanvasXSize; }
+        if (imgH > CanvasYSize) { clearY = imgH; } // 캔버스보다 큰 이미지
+        else { clearY = CanvasYSize; }
+        // 캔버스 요소 얻기
+        ctx = document.getElementById('canvas').getContext('2d');
+        // 새로 그리기 속도 설정
+        return setInterval(draw, speed);
+    }
+
+    function draw() {
+        // 캔버스를 비운다
+        ctx.clearRect(0,0,clearX,clearY);
+        // 이미지가 캔버스보다 작거나 같다면 (If image is <= Canvas Size)
+        if (imgW <= CanvasXSize) {
+            // 재설정, 처음부터 시작
+            if (x > (CanvasXSize)) { x = 0; }
+            // 추가 이미지 그리기
+            if (x > (CanvasXSize-imgW)) { ctx.drawImage(img,x-CanvasXSize+1,y,imgW,imgH); }
+        }
+        // 이미지가 캔버스보다 크다면 (If image is > Canvas Size)
+        else {
+            // 재설정, 처음부터 시작
+            if (x > (CanvasXSize)) { x = CanvasXSize-imgW; }
+            // 추가 이미지 그리기
+            if (x > (CanvasXSize-imgW)) { ctx.drawImage(img,x-imgW+1,y,imgW,imgH); }
+        }
+        // 이미지 그리기
+        ctx.drawImage(img,x,y,imgW,imgH);
+        // 움직임 정도
+        x += dx;
+    }
+
+    var timerID = null; // ** 10.3 setTimeout() 으로 웹 페이지 자동 연결 **
+    function startTimer(time) {
+      timerID = setTimeout("load('http://www.naver.com')", time);
+
+      document.getElementById("canvas").title = "타이머 작동 !!"
+    }
+    function cancelTimer() {
+      if(timerID != null)
+      {
+        clearTimeout(timerID);
+      }
+    }
+    function load(url){
+      window.location=url;
+    }
+
+
+  </script>
+</body>
+
+</html>
