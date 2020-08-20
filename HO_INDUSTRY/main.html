@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>::HOOY INDUSTRY::</title>
+	<style type="text/css">
+		@import url(manubar.css);
+		@import url(mystyle.css);
+	</style>
+</head>
+
+<body>
+<header>
+	<h2 href="main.html">HOOYn_n INDUSTRY</h2>
+	<p style="text-align:right;"><label>
+	SEARCH:<input type="text" value="">
+	<input type="button" value="search"><p>
+
+	</label>
+	<hr>
+</header>
+<nav id="menubar">
+	<br>
+	<br>
+	<ul>
+		<li><a href ="IntroMyself.html">Introduction</a></li>
+		<li><a href="trip.html">Trip_record</a></li>
+		<li><a href="tripscheduel.html">Where I want to go</a></li>
+		<li><a href="deliciousfood.html">Delicious food</a></li>
+		<li><a href="">mention</a></li>
+	</ul>
+	<br><br>
+</nav>
+<article>
+	<h3>&nbsp&nbsp&nbsp&nbsp My Travel Record Repository</h3>
+	<hr>
+	<canvas id="canvas" width="1550" height="500"></canvas><hr>
+
+	<script type="text/javascript">
+		var canvas = document.getElementById("canvas");
+		var context = canvas.getContext("2d");
+
+		var img = new Image();
+		img.onload = function () {
+			context.drawImage(img, 0, 0, canvas.width, canvas.height);
+		}
+		img.src = "hanganriver.jpg";
+	</script>
+</body>
+</body>
+</body>
+</html>

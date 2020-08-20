@@ -1,0 +1,38 @@
+* {
+	background-color: lavender
+	font:normal bold 1em serif;
+	text-decoration: none;
+	text-decoration-color: blue;
+	}
+
+header h2>a {
+	color : skyblue;
+	text-shadow: 2px 2px 2px black
+}
+header h2 {
+	font-size: 2em;
+	text-align: center;
+}
+h2>a:hover {
+	text-shadow: 0 0 25px blue, 0 0 5px darkblue;
+}
+
+
+header hr {
+	border:4px;
+	color:deepskyblue;
+}
+
+
+h3 {
+	font-size : 1.5em;
+	color : aliceblue;
+	text-shadow: 0 0 25px pink, 0 0 5px darkblue;
+}
+
+nav>ul>li>a:link { color: black; text-decoration: none; }
+nav>ul>li>a:visited { color: black; text-decoration: none; }
+nav>ul>li>a:active { color: black; text-decoration: none; }
+nav>ul>li>a:hover { color: black; text-decoration: none; }
+
+.selectmenu { color:aliceblue; text-shadow: 0 0 25px green, 0 0 5px darkblue; }

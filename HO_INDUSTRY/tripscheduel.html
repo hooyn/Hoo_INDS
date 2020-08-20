@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>::HOOY INDUSTRY::</title>
+	<style type="text/css">
+		@import url(manubar.css);
+		@import url(mystyle_tripscheduel.css);
+	</style>
+	<script type="text/javascript">
+		var files=["스위스1.PNG",
+					"스위스2.PNG",
+					"스위스3.PNG",
+					"스위스4.jpg",
+					"스위스5.jpg",
+					"스위스6.jpg",
+					"스위스7.jpg"];
+		var imgs = new Array();
+		for(var i=0; i<files.length;i++)
+		{
+			imgs[i] = new Image();
+			imgs[i].src = files[i];
+		}
+
+		var next=1;
+		function change(img)
+		{
+			img.src=imgs[next].src;
+			next++;
+			next %= imgs.length;
+		}
+	</script>
+</head>
+<body>
+<header>
+	<h2><a href="main.html">HOOYn_n INDUSTRY</a></h2>
+	<p style="text-align:right;"><label>
+	SEARCH:<input type="text" value="">
+	<input type="button" value="search"><p>
+
+	</label>
+	<hr>
+</header>
+<nav id="menubar">
+	<br>
+	<br>
+	<ul>
+		<li><a href="IntroMyself.html">Introduction</li>
+		<li><a href="trip.html">Trip_record</a></li>
+		<li class="selectmenu">Where I want to go</a></li>
+		<li><a href = "deliciousfood.html">Delicious food</a></li>
+		<li><a href = "">mention</a></li>
+	</ul>
+	<br><br>
+</nav>
+<article>
+	<h3>Trip_Secheduel</h3>
+	<hr>
+	<h4>Switzerland</h4>
+	<hr>
+	<div><img style="border:12px ridge brown" src='스위스1.png' width='500' height='300' onclick='change(this)'>
+		<img style="border:12px ridge brown" src='스위스1.png' width='500' height='300' onclick='change(this)'></div>
+
+	<br>
+	<p style="text-align: right; "><mark>사진 클릭 시 다음 풍경 사진으로 넘어 갑니다.</mark></p>
+	<hr>
+	<p><span>스위스</span>(독일어: Schweiz 슈바이츠[*], 프랑스어: Suisse 쉬스[*], 이탈리아어: Svizzera 스비체라[*], 로만슈어: Svizra 주비츠라)는 <span>중앙유럽에 있는 연방 공화국이며, 내륙국이다.</span> 수도는 법률상으로 없으나, <span>베른이 사실상 수도 기능을 하고 있으며, 최대 도시는 취리히이다.</span> 오래 전부터 공식적으로 영세중립국을 표방하고 있다. 정식 명칭은 헬베티아 연방(라틴어: Confoederatio Helvetica 콘포이데라티오 헬베티카[*][1])이지만 스위스 연방(영어: Swiss Confederation 스위스 컨페더레이션[*], 독일어: Schweizerische Eidgenossenschaft 슈바이체리셰 아이트게노센샤프트[*], 프랑스어: Confédération suisse 콩페데라시옹 쉬스[*], 이탈리아어: Confederazione Svizzera 콘페데라치오네 스비체라[*], 로만슈어: Confederaziun svizra 콘페데라치운 주비츠라)이라 부르기도 한다. 국가 도메인은 .ch으로 Confoederatio Helvetica의 약자이다. 타칭 국명은 스위스 연맹을 지도적으로 형성했던 슈비츠(Schwyz) 주에서 유래하였고, 정식 명칭은 로마 제국 시기의 헬베티족 또는 갈리아 지명에서 유래하였다.</p>
+
+
+
+	<hr>
+</article>
+</body>
+</html>

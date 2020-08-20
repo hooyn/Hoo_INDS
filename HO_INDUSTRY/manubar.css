@@ -1,0 +1,23 @@
+#menubar {
+	background : deepskyblue;
+	border-radius: 20px;
+		}
+
+#menubar ul {
+	text-align: center;
+	margin : 0;
+	padding : 0;
+	width : 567;
+}
+#menubar ul li {
+	display : inline-block;
+	list-style-type : none;
+	padding : 0px 25px;
+}
+#menubar ul li a {
+	color : white;
+	text-decoration : none;
+}
+#menubar ul li a:hover {
+	color : violet;
+}
